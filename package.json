@@ -1,0 +1,22 @@
+{
+  "name": "1_git-hook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^17.0.23",
+    "picocolors": "^1.0.0",
+    "simple-git-hooks": "^2.7.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "pnpm exec ts-node scripts/verifyCommit.ts $1"
+  }
+}
